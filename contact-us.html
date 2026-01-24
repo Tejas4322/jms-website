@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="jms-company-logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact JMS Industries for elevator component inquiries, quotes, and support. We're here to help with your vertical transportation needs.">
+    <title>Contact Us | JMS Industries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>JMS Industries</h1>
+                <p class="tagline">Elevating Excellence</p>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="quality-compliance.html">Quality & Compliance</a></li>
+                <li><a href="contact-us.html" class="active">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" style="height: 50vh;">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Get In Touch</h1>
+            <p class="hero-subtitle">We're Here to Help</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+                <div class="fade-in-scroll">
+                    <h2 style="font-size: 32px; margin-bottom: 20px;">Contact Information</h2>
+                    <div style="margin: 30px 0;">
+                        <div style="margin-bottom: 25px;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 8px;">📍 Address</h4>
+                            <p style="color: var(--text-light);">Plot No. 45, Industrial Area,<br>Andheri East, Mumbai - 400069,<br>Maharashtra, India</p>
+                        </div>
+                        <div style="margin-bottom: 25px;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 8px;">📞 Phone</h4>
+                            <p style="color: var(--text-light);">+91 98765 43210<br>+91 98765 43211</p>
+                        </div>
+                        <div style="margin-bottom: 25px;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 8px;">✉️ Email</h4>
+                            <p style="color: var(--text-light);">info@JMS Industries.com<br>sales@JMS Industries.com</p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-color); margin-bottom: 8px;">🕐 Business Hours</h4>
+                            <p style="color: var(--text-light);">Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+<div class="fade-in-scroll">
+                    <h2 style="font-size: 32px; margin-bottom: 20px;">Send Us a Message</h2>
+                    <form id="contactForm" novalidate>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inquiry">What can we help you with? *</label>
+                            <select id="inquiry" name="inquiry" required>
+                                <option value="">-- Please select an inquiry type --</option>
+                                <option value="elevator-car-frame">Elevator Car Frame (Geared / Gearless / Goods / Car Lift)</option>
+                                <option value="elevator-cabin">SS / MS Elevator Cabin</option>
+                                <option value="auto-door">SS / MS Auto Door</option>
+                                <option value="guide-rail-brackets">Guide Rail Brackets</option>
+                                <option value="machine-mounting">Elevator Machine Mounting</option>
+                                <option value="multiple-products">Multiple Products / Complete Elevator System</option>
+                                <option value="custom-requirement">Custom Requirement / Special Project</option>
+                                <option value="technical-support">Technical Support</option>
+                                <option value="quotation">Request for Quotation</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="form-helper">Choose the product or service you're interested in</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Details (Optional)</label>
+                            <textarea id="message" name="message" placeholder="Please provide details such as:&#10;• Required specifications (dimensions, capacity, material)&#10;• Project timeline and location&#10;• Quantity needed&#10;• Any specific customization requirements&#10;&#10;Example: 'Need 5 gearless car frames for 8-person capacity, stainless steel finish, delivery to Chennai by March 2026'"></textarea>
+                            <div class="form-helper">Help us understand your requirements better for a more accurate response</div>
+                        </div>
+                        <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        <p id="formStatus" style="margin-top:12px;"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>JMS Industries</h3>
+                    <p>Leading manufacturer of premium elevator components, committed to quality, innovation, and customer satisfaction.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/products">Products</a></li>
+                        <li><a href="/quality-compliance">Quality</a></li>
+                        <li><a href="/contact-us">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="/products/elevator-car-frame">Car Frame</a></li>
+                        <li><a href="/products/ss-ms-elevator-cabin">Cabins</a></li>
+                        <li><a href="/products/ss-ms-auto-door">Auto Doors</a></li>
+                        <li><a href="/products/guide-rail-brackets">Brackets</a></li>
+                        <li><a href="/products/elevator-machine-mounting">Machine Mounting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 Industrial Area, Mumbai</li>
+                        <li>📞 +91 98765 43210</li>
+                        <li>✉️ info@JMS Industries.com</li>
+                        <li>🕐 Mon-Sat: 9AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 JMS Industries. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
