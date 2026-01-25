@@ -402,35 +402,48 @@ document.addEventListener('DOMContentLoaded', () => {
 //   }
 // });
 
-const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbyVfHEfmMwZmMaEPjA6BlpcdY-s4MdRtEZVbAglydp2XAcRAwQuQ6aCXyFlvbNzuB30kw/exec';
+// const GOOGLE_SCRIPT_URL =
+//   'https://script.google.com/macros/s/AKfycbyVfHEfmMwZmMaEPjA6BlpcdY-s4MdRtEZVbAglydp2XAcRAwQuQ6aCXyFlvbNzuB30kw/exec';
 
-document.getElementById('submitBtn').addEventListener('click', () => {
-  console.log('Button clicked — forcing POST');
+// document.getElementById('submitBtn').addEventListener('click', () => {
+//   console.log('Button clicked — forcing POST');
 
-  const payload = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value,
-    message: document.getElementById('message').value.trim()
-  };
+//   const payload = {
+//     name: document.getElementById('name').value,
+//     email: document.getElementById('email').value,
+//     phone: document.getElementById('phone').value,
+//     message: document.getElementById('message').value.trim()
+//   };
 
-  fetch(GOOGLE_SCRIPT_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(payload)
-  })
-  .then(res => res.text())
-  .then(data => {
-    console.log('Response:', data);
-    alert('Enquiry submitted successfully');
-  })
-  .catch(err => {
-    console.error('Error:', err);
-  });
+//   fetch(GOOGLE_SCRIPT_URL, {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify(payload)
+//   })
+//   .then(res => res.text())
+//   .then(data => {
+//     console.log('Response:', data);
+//     alert('Enquiry submitted successfully');
+//   })
+//   .catch(err => {
+//     console.error('Error:', err);
+//   });
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  if (!slides.length) {
+    console.error("No slides found");
+    return;
+  }
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }, 4000); // change every 4 seconds
 });
-
-
- 
