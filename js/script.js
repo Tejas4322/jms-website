@@ -376,3 +376,49 @@ window.addEventListener('scroll', () => {
     progressBar.style.width = scrollPercent + '%';
   }
 });
+
+  (function () {
+    "use strict";
+
+    // define variables
+    var items = document.querySelectorAll(".timeline li");
+
+    // check if an element is in viewport
+    // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function callbackFunc() {
+      for (var i = 0; i < items.length; i++) {
+        if (isElementInViewport(items[i])) {
+          items[i].classList.add("in-view");
+        }
+      }
+    }
+
+    // listen for events
+    window.addEventListener("load", callbackFunc);
+    window.addEventListener("resize", callbackFunc);
+    window.addEventListener("scroll", callbackFunc);
+  })();
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const wa = document.createElement("a");
+  wa.href =
+    "https://wa.me/919323568279?text=Hello%20JMS%20Industries,%20I%20would%20like%20to%20enquire.";
+  wa.target = "_blank";
+  wa.className = "whatsapp-float";
+  wa.setAttribute("aria-label", "Chat on WhatsApp");
+
+  wa.innerHTML = `
+    <img src="../images/whatsapp.svg" alt="WhatsApp" />
+  `;
+
+  document.body.appendChild(wa);
+});
