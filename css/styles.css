@@ -2295,3 +2295,141 @@ background-image: url('../images/elevator-door.png');
       border-color: transparent #00246B transparent transparent;
     }
   }
+
+  
+
+/* =========================================================================
+   ADD THIS TO THE END OF YOUR styles.css FILE
+   ========================================================================= */
+
+/* ===== Form Messages Container (Contact Page) ===== */
+.form-messages-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.form-messages-container .alert {
+    position: relative !important;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    animation: slideDownAlert 0.3s ease-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideDownAlert {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Success Alert Styling */
+#formSuccess {
+    background-color: #d1f2eb !important;
+    border: 1px solid #0f6848 !important;
+    border-left: 4px solid #0f6848 !important;
+    color: #0f6848 !important;
+}
+
+#formSuccess strong {
+    color: #0a5535 !important;
+    font-weight: 600;
+}
+
+#formSuccess .fa-circle-check {
+    color: #0f6848 !important;
+}
+
+/* Error Alert Styling */
+#formError {
+    background-color: #f8d7da !important;
+    border: 1px solid #842029 !important;
+    border-left: 4px solid #842029 !important;
+    color: #842029 !important;
+}
+
+#formError strong {
+    color: #58151c !important;
+    font-weight: 600;
+}
+
+#formError .fa-circle-exclamation {
+    color: #842029 !important;
+}
+
+/* Form Validation Error Styling */
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545 !important;
+    background-image: none;
+}
+
+.form-control.is-invalid:focus,
+.form-select.is-invalid:focus {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.error-text {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    font-weight: 500;
+}
+
+/* Form Submit Button Loading State */
+#sendMessageBtn .spinner-border {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+}
+
+#sendMessageBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Form Input Focus States */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 36, 107, 0.15);
+}
+
+/* Placeholder Styling */
+.form-control::placeholder {
+    color: #999;
+    font-size: 0.95rem;
+}
+
+/* Form Label Styling */
+.form-label {
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+/* Required Field Indicator */
+.form-label::after {
+    content: none;
+}
+
+/* Mobile Responsiveness for Alerts */
+@media (max-width: 768px) {
+    .form-messages-container .alert {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .form-messages-container .alert i {
+        font-size: 1.25rem !important;
+    }
+}

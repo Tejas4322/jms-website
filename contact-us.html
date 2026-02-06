@@ -30,52 +30,49 @@
   <div class="container">
     <div class="row g-5 align-items-start">
 
-     
      <!-- LEFT: CONTACT INFORMATION -->
 <!-- LEFT: CONTACT INFORMATION -->
 <div class="col-lg-6 fade-in-scroll">
 
   <div class="contact-info-wrapper">
 
-    <h3 class="contact-info-title">Contact Information</h3>
-    <p class="contact-info-subtitle">
-      We’d love to hear from you. Reach us at our offices below.
-    </p>
+    <!-- <h3 class="contact-info-title">Contact Information</h3> -->
 
-    <!-- ADDRESS CARDS -->
-    <div class="row g-4">
+<h3 class="contact-info-title">Contact Information</h3>
 
-      <!-- Head Office -->
-      <div class="col-md-6">
-        <div class="contact-card">
-          <div class="contact-card-icon">
-            <i class="fa-solid fa-location-dot"></i>
-          </div>
-          <h5>Head Office</h5>
-          <p>
-            Plot No. 45, Industrial Area,<br>
-            Andheri East, Mumbai – 400069,<br>
-            Maharashtra, India
-          </p>
-        </div>
+<div class="row g-4">
+
+  <!-- Mumbai Office -->
+  <div class="col-md-6">
+    <div class="contact-card">
+      <div class="contact-card-icon">
+        <i class="fa-solid fa-location-dot"></i>
       </div>
-
-      <!-- Factory -->
-      <div class="col-md-6">
-        <div class="contact-card">
-          <div class="contact-card-icon">
-            <i class="fa-solid fa-industry"></i>
-          </div>
-          <h5>Manufacturing Unit</h5>
-          <p>
-            Gala No. 12, Industrial Estate,<br>
-            Shilphata Road, Navi Mumbai,<br>
-            Maharashtra, India
-          </p>
-        </div>
-      </div>
-
+      <h5>Mumbai Office</h5>
+      <p>
+        Plot No. 45, Industrial Area,<br>
+        Andheri East, Mumbai – 400069,<br>
+        Maharashtra, India
+      </p>
     </div>
+  </div>
+
+  <!-- Chennai Office -->
+  <div class="col-md-6">
+    <div class="contact-card">
+      <div class="contact-card-icon">
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
+      <h5>Chennai Office</h5>
+      <p>
+        SIDCO Industrial Estate,<br>
+        Ambattur, Chennai – 600098,<br>
+        Tamil Nadu, India
+      </p>
+    </div>
+  </div>
+
+</div>
 
     <!-- OTHER DETAILS -->
     <div class="contact-meta">
@@ -117,48 +114,65 @@
 
       <!-- RIGHT: CONTACT DETAILS + FORM -->
       <div class="col-lg-6 fade-in-scroll">
+  
+  <!-- ✅ FIXED: Form Messages Container -->
+  <div class="form-messages-container">
+    <div id="formSuccess" class="alert alert-success d-none" role="alert">
+      <div class="d-flex align-items-center">
+        <i class="fa-solid fa-circle-check me-3" style="font-size: 1.5rem;"></i>
+        <div>
+          <strong>Success!</strong> Your message has been sent successfully.
+          <p class="mb-0 mt-1" style="font-size: 0.9rem;">We'll get back to you within 24 hours.</p>
+        </div>
+      </div>
+    </div>
 
-        
-       
+    <div id="formError" class="alert alert-danger d-none" role="alert">
+      <div class="d-flex align-items-center">
+        <i class="fa-solid fa-circle-exclamation me-3" style="font-size: 1.5rem;"></i>
+        <div>
+          <strong>Error!</strong>
+          <p class="mb-0 mt-1">Something went wrong. Please try again later.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <form id="contactForm" novalidate>
         <form id="contactForm" novalidate>
-
           <div class="row g-3">
             <div class="col-md-6">
               <label class="form-label">Full Name *</label>
              <input
-  type="text"
-  id="name"
-  class="form-control"
-  required
->
-<small class="error-text"></small>
+              type="text"
+              id="name"
+              class="form-control"
+              required
+            >
+        <small class="error-text"></small>
 
             </div>
 
             <div class="col-md-6">
               <label class="form-label">Email Address *</label>
               <input type="email" id="email" class="form-control" required>
-<small class="error-text"></small>
-
+              <small class="error-text"></small>
             </div>
 
             <div class="col-md-6">
               <label class="form-label">Phone Number *</label>
-             <input type="tel" id="phone" class="form-control" required>
-<small class="error-text"></small>
-
+              <input type="tel" id="phone" class="form-control" required>
+              <small class="error-text"></small>
             </div>
 
             <div class="col-md-6">
               <label class="form-label">Company Name</label>
-              <input type="text" class="form-control">
+              <input type="text" id="company" class="form-control">
             </div>
 
             <div class="col-12">
               <label class="form-label">Inquiry Type *</label>
-             <select id="inquiry" class="form-select" required>
-
+              <select id="inquiry" class="form-select" required>
                 <option value="">Select an option</option>
                 <option>Elevator Car Frame</option>
                 <option>Elevator Cabin</option>
@@ -169,17 +183,14 @@
               </select>
             </div>
 
-            <div class="col-12">
+            <!-- <div class="col-12">
               <label class="form-label">Additional Details</label>
-              <textarea id="message" class="form-control" rows="4"></textarea>
-<small class="error-text"></small>
-
-            </div>
+              <textarea id="message" class="form-control" rows="4"></textarea> -->
+              <!-- <small class="error-text"></small> -->
+            <!-- </div> -->
 
             <div class="col-12">
-              <button class="btn btn-primary w-100">
-                Send Message
-              </button>
+              <button id="sendMessageBtn" type="submit" class="btn btn-primary w-100">Send Message</button>
             </div>
           </div>
 
@@ -189,7 +200,6 @@
     </div>
   </div>
 </section>
-
 
 
     <!-- Footer -->
