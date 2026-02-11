@@ -647,11 +647,18 @@ ul {
     padding: 60px 0 20px;
 }
 
-.footer-grid {
+/* .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 40px;
+} */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.7fr 1.8fr;
+  gap: 40px;
 }
+
 
 .footer-col h3 {
     color: white;
@@ -1752,6 +1759,14 @@ background-image: url('../images/elevator-door.png');
   margin-bottom: 4px;
 }
 
+/*Added new changes for address box in footer */
+/* .address-box {
+  min-height: 260px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+} */
+
 /* Address text lighter */
 .address-text {
   font-size: 13px;
@@ -1766,9 +1781,20 @@ background-image: url('../images/elevator-door.png');
   flex-direction: column;
   font-size: 13px;
   color: #e0e0e0;
+  margin-top: 12px;
+}
+
+Added new change for contact title in footer
+.contact-title {
+  display: block;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 4px;
 }
 
 .contact-inline span {
+  display: block;
+  line-height: 1.6;
   font-size: 12.5px;
   color: #cfcfcf;
 }
