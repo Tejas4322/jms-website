@@ -26,6 +26,11 @@
 html {
     scroll-behavior: smooth;
 }
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 
 body {
     font-family: var(--font-primary);
@@ -724,9 +729,14 @@ ul {
 /* ===== Product Grid ===== */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 30px;
     margin-top: 40px;
+}
+@media (max-width: 576px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .product-card {
@@ -1280,7 +1290,7 @@ ul {
 
 .about-img-wrapper {
   width: 100%;
-  height: 520px;          /* ✅ CONTROL HEIGHT HERE */
+  /* height: 520px;      */
   overflow: hidden;
   border-radius: 16px;
 }
@@ -1576,7 +1586,7 @@ background-image: url('../images/elevator-door.png');
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transform: scale(1.08);
+  transform: none;
 }
 
 /* ===== Pins ===== */
@@ -2196,6 +2206,24 @@ background-image: url('../images/elevator-door.png');
   }
 }
 
+@media (max-width: 768px) {
+
+  .timeline ul li {
+    margin-left: 20px;
+  }
+
+  .timeline ul li div {
+    width: calc(100% - 60px);
+    left: 45px !important;
+    transform: none !important;
+  }
+
+  .timeline ul li:nth-child(even) div {
+    left: 45px !important;
+  }
+
+}
+
 
 @media (max-width: 992px) {
   .about-img-wrapper {
@@ -2270,14 +2298,7 @@ background-image: url('../images/elevator-door.png');
   
 }
 
-@media screen and (max-width: 900px) {
-    .timeline ul li div {
-      width: 250px;
-    }
-    .timeline ul li:nth-child(even) div {
-      left: -289px;
-    }
-  }
+
   
   @media screen and (max-width: 600px) {
     .timeline ul li {
