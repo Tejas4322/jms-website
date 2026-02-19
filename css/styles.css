@@ -296,6 +296,53 @@ ul {
     flex-wrap: wrap;
 }
 
+/* =========================================================
+   HERO TEXT ANIMATION (Slide Up + Fade In)
+   ========================================================= */
+
+/* Initial hidden state */
+.hero-content .hero-title,
+.hero-content .hero-subtitle,
+.hero-content .hero-animate-delay-2 {
+  opacity: 0;
+  transform: translateY(65px);
+}
+
+/* Animation */
+.hero-content .hero-title {
+  animation: heroSlideUp 1.4s ease forwards;
+}
+
+.hero-content .hero-subtitle {
+  animation: heroSlideUp 1.4s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.hero-content .hero-animate-delay-2 {
+  animation: heroSlideUp 1.4s ease forwards;
+  animation-delay: 0.55s;
+}
+
+/* Keyframes */
+@keyframes heroSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(65px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Prevent Bootstrap transition interference */
+/* .hero-title,
+.hero-subtitle,
+.hero-content .btn {
+  transition: none;
+} */
+
+
 /* Animations */
 .animate-fade-in {
     animation: fadeIn 1s ease-out;

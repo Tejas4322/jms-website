@@ -37,13 +37,25 @@
          <!-- DARK OVERLAY -->
          
          <!-- CONTENT -->
-         <div class="container hero-content">
+         <!-- <div class="container hero-content">
             <h1 class="hero-title">Trusted Elevator Parts Manufacturer in India</h1>
             <p class="hero-subtitle">
                JMS Industries – 15+ years of precision engineering for elevator systems
             </p>
             <a href="contact-us.html" class="btn btn-primary btn-lg">Enquire Now</a>
+         </div> -->
+         <div class="container hero-content">
+            <h1 class="hero-title hero-animate">
+               Trusted Elevator Parts Manufacturer in India
+            </h1>
+            <p class="hero-subtitle hero-animate-delay-1">
+               JMS Industries – 15+ years of precision engineering for elevator systems
+            </p>
+            <a href="contact-us.html" class="btn btn-primary btn-lg hero-animate-delay-2">
+               Enquire Now
+            </a>
          </div>
+
       </section>
       <!-- ================= CORE VALUES ================= -->
       <section class="section section-intro">
@@ -325,5 +337,10 @@
       <script src="js/navbar.js"></script>
       <script src="js/footer.js"></script>
       <script src="js/script.js"></script>
+      <script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".hero-content").classList.add("anim-ready");
+});
+</script>
    </body>
 </html>
